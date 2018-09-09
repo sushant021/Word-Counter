@@ -1,0 +1,11 @@
+{%extends "base.html" %}
+{%block content%}
+
+<p> The no of words are: {{no_of_words}}</p>
+{%for word,count in sortedWords%}
+<p>{{word}}-->{{count}}</p>
+{%endfor%}
+{% for word,count in searchWordList%}
+<p>Search word "{{word}}" was found {{count}} times </p>
+{%endfor%}
+{%endblock content%}
